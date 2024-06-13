@@ -1,0 +1,137 @@
+.benefits {
+    @include size(100%);
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 32px;
+
+    padding: 0 120px 0 120px;
+
+    @include max-width(1320px){
+        padding: 0 60px 0 60px;
+    }
+
+    @include max-width(768px){
+        margin-bottom: 16px;
+        padding: 0 30px 0 30px;
+    }
+
+    @include max-width(450px){
+        padding: 0 15px 0 15px;
+    }
+
+    &__container {
+        @include size(100%);
+
+        display: block;
+
+        position: relative;
+    }
+
+    &__title {
+        @include size(100%);
+
+        margin-bottom: 48px;
+
+        @include max-width(1320px){
+            // text-align: center;
+        }
+
+        @include max-width(1270px){
+            font-size: 36px;
+            line-height: 48px;
+
+            margin-bottom: 24px;
+        }
+
+        @include max-width(900px){
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        @include max-width(768px){
+            font-size: 24px;
+            line-height: 32px;
+
+            margin-bottom: 12px;
+        }
+
+        @include max-width(450px){
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        justify-content: center !important;
+    }
+
+    &__card-container {
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 24px;
+
+        @include max-width(1270px){
+            gap: 18px
+        }
+
+        @include max-width(768px){
+            gap: 12px
+        }
+
+        @include max-width(450px){
+            gap: 6px
+        }
+    }
+
+    &__pagination{
+        height: 8px;
+        margin-bottom: 16px;
+
+        .swiper-pagination {
+            position: absolute;
+            top: 0;
+
+            display: flex;
+            align-items: start;
+
+            line-height: 4px;
+
+            height: 4px;
+        }
+		.swiper-pagination-bullet {
+			@include size(39px, 4px);
+
+			background-color: $gray;
+			color: $gray;
+			border-radius: 0px;
+			opacity: 1;
+
+			transition: width 500ms;
+		}
+		.swiper-pagination-bullet-active {
+			@include size(78px, 4px);
+
+			border-radius: 0px;
+
+			background-color: $red;
+			color: $red;
+		}
+	}
+}
+
+.swiper-slide.swiper-slide-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

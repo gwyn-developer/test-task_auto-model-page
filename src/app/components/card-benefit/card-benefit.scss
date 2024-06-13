@@ -1,0 +1,96 @@
+.card-benefit {
+    width: 282px;
+    height: fit-content;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        padding: 0 52.5px 24px 52.5px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 16px;
+
+        &-title {
+            font-weight: 700;
+
+            padding-bottom: 16px;
+        }
+
+        &-description {
+            font-family: $regularFont;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25.6px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.card-benefit-desktop {
+    .card-benefit__img {
+        @include max-width(1270px){
+            padding: 0 40px 28px 40px;
+        }
+        @include max-width(768px){
+            padding: 0 25px 12px 25px;
+        }
+        @include max-width(450px){
+            padding: 0 14px 6px 14px;
+        }
+    }
+
+    .card-benefit__text {
+        @include max-width(768px){
+            padding: 8px;
+        }
+
+        &-title {
+            font-weight: 700;
+
+            padding-bottom: 16px;
+
+            @include max-width(768px){
+                padding-bottom: 8px;
+
+                font-size: 14px;
+                line-height: 24px;
+            }
+            @include max-width(450px){
+                padding-bottom: 4px;
+
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        &-description {
+            font-family: $regularFont;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25.6px;
+            text-transform: uppercase;
+
+            @include max-width(768px){
+                font-size: 12px;
+                line-height: 18px;
+            }
+            @include max-width(450px){
+                font-size: 10px;
+                line-height: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.button-sign-up {
+    @include size(280px, 50px);
+
+    border: solid 2px $white;
+
+    background-color: $white;
+    color: $black;
+
+    padding: 10px 15px 13px 20px;
+
+    letter-spacing: -0.01em;
+
+    font-family: $regularFont;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__arrow-right {
+        width: 9px;
+        height: 9px;
+        
+        border-top: 3px solid $black;
+        border-right: 3px solid $black;
+
+        margin-top: 8px;
+
+        transform: rotate(45deg);
+    }
+
+    &:hover {
+        color: $white;
+        background-color: $red;
+        border-color: $red;
+
+        cursor: pointer;
+
+        &__arrow-right {
+            border-top: 3px solid $white;
+            border-right: 3px solid $white;
+        }
+    }
+}
+
+.button-sign-up:hover .button-sign-up__arrow-right {
+    border-top: 3px solid $white;
+    border-right: 3px solid $white;
+}

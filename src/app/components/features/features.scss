@@ -1,0 +1,71 @@
+.features {
+    @include size(100%);
+
+    display: flex;
+    justify-content: center;
+
+    padding: 64px 120px 64px 120px;
+
+    @include max-width(1320px){
+        padding: 32px 60px 32px 60px;
+    }
+    @include max-width(768px){
+        padding: 16px 30px 16px 30px;
+    }
+    @include max-width(450px){
+        padding: 8px 15px 8px 15px;
+    }
+
+    &__container {
+        @include size(100%);
+
+        display: block;
+    }
+
+    &__title {
+        @include size(100%);
+
+        margin-bottom: 48px;
+
+        @include max-width(1320px){
+            margin-bottom: 24px;
+
+            font-size: 24px;
+            line-height: 32px;
+        }
+        @include max-width(768px){
+            margin-bottom: 12px;
+
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    &__cards-container {
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        justify-content: center;
+
+        flex-wrap: wrap;
+        
+        gap: 24px;
+
+        &_mob {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include max-width(768px){
+            gap: 12px;
+        }
+    }
+
+    &__btn {
+        margin-top: 40px;
+
+        display: flex;
+        justify-content: center;
+    }
+}

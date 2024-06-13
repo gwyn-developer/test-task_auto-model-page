@@ -1,0 +1,23 @@
+.button-add {
+    @include size(280px, 50px);
+
+    border: solid 2px $red;
+
+    background-color: $white;
+    color: $black;
+
+    padding: 13px 47px 13px 47px;
+
+    letter-spacing: -0.01em;
+    font-family: $regularFont;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+
+    &:hover {
+        color: $white;
+        background-color: $red;
+
+        cursor: pointer;
+    }
+}
